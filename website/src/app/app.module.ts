@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import {MatToolbarModule,MatIconModule,MatButtonModule
 ,MatSidenavModule} from '@angular/material';
+import { AboutComponent } from './about/about.component';
 
 //NgModule for material 
 @NgModule({
@@ -19,7 +20,8 @@ export class MaterialModule { }
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
