@@ -1,15 +1,15 @@
 <!-- Header Design -->
 <mat-toolbar color='primary'>
         <div class="button-row" style="width:100%;">
-       <button mat-raised-button  style="width:10%" color="primary"><i class="material-icons">home</i>Home</button>
-       <button mat-raised-button  style="width:15%"color="primary">About</button>
-        <button mat-raised-button  style="width:25%"color="primary">Qualification</button>
-        <button mat-raised-button  style="width:25%"color="primary">ServicesOffered</button>
-        <button mat-raised-button  style="width:15%"color="primary"><i class="material-icons">contact_phone</i>Contact</button>
+       <button mat-raised-button  routerLink="/home" routerLinkActive="active"  style="width:20%" color="primary"><i class="material-icons">home</i>Home</button>
+       <button mat-raised-button  routerLink="/about" routerLinkActive="active" style="width:20%"color="primary">About</button>
+        <button mat-raised-button  style="width:20%"color="primary">Qualification</button>
+        <button mat-raised-button  style="width:20%"color="primary">ServicesOffered</button>
+        <button mat-raised-button  style="width:20%"color="primary"><i class="material-icons">contact_phone</i>Contact</button>
         </div>
     </mat-toolbar>
 
-
+    
   
 <!--Connect to social networks-->
 <div style="width:100%;height:100%;position:absolute;vertical-align:middle;text-align:center;">
@@ -30,14 +30,8 @@
   
    
 
-  <div class="warmOscar">
-    <div class="absoluteCenter">
-      <h2>NEPHROLOGY.<span>CARE</span></h2>
-      
-      <p>protect your kidneys ,Save your heart.</p>
-    </div>
-  </div>
-
+ 
+  <router-outlet></router-outlet>
  <!-- Footer Design -->
 <footer style="position: fixed; bottom: 0px;left: 0px; width: 100%; height: 60px">
     <mat-toolbar color="primary" class="bottom">
