@@ -5,16 +5,15 @@
 }
 
 
-.img-responsive { background-size: cover; }
- .image {
-  opacity: 1;
-  display: relative;
-  width: 50%;
-  height: auto;
-  transition: .5s ease;
 
-  object-fit: cover;
- 
+ .image {
+  position: fixed; 
+  top: 08%; 
+  left: 0; 
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
 }
 
  .warmOscar {  
@@ -84,7 +83,7 @@
     
     width: 100%;
     padding: 3rem;
-    /* border: 1px solid white; */
+    
     position: absolute;
     left: 0px;
     top: 50%;
