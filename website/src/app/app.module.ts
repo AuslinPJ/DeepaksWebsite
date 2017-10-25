@@ -1,15 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-import {MatToolbarModule,MatIconModule,MatButtonModule} from '@angular/material';
+import {MatToolbarModule,MatIconModule,MatButtonModule
+,MatSidenavModule} from '@angular/material';
 
 //NgModule for material 
 @NgModule({
   exports: [
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSidenavModule
   ]
 })
 export class MaterialModule { }
@@ -21,7 +23,8 @@ export class MaterialModule { }
   ],
   imports: [
     BrowserModule,
-    MaterialModule
+    MaterialModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
