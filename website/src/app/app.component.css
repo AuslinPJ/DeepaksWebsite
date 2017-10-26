@@ -1,12 +1,16 @@
 .mat-raised-button {
-    border: none;
-    color: rgb(255, 255, 255);
    
-    text-align: center;
-    text-decoration: none;
+    font-family: inherit;
+    padding: 0px 0;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #e6e6e6;
+    position: relative;
     display: inline-block;
-    font-size: 16px;
-    width:260px;
+    outline: none;
+    margin: 15px 25px;
+    
   }
 
   .button-row {
@@ -22,6 +26,12 @@
   }
   
 
+  .mat-toolbar.mat-primary {
+    width:100%;
+    background: #252525;
+    color: rgba(255,255,255,.87);
+}
 
-
-  
+.mat-fab.mat-primary, .mat-mini-fab.mat-primary, .mat-raised-button.mat-primary {
+  background-color:#252525;
+}
