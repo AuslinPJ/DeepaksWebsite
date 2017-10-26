@@ -9,6 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
+import { ServicesComponent } from './services/services.component';
 
 //Routing
 const appRoutes: Routes = [
@@ -36,6 +37,11 @@ const appRoutes: Routes = [
   component: TestimonialComponent,
  
 },
+{
+  path: 'services',
+  component: ServicesComponent,
+ 
+},
 
 ];
 
@@ -58,7 +64,8 @@ export class MaterialModule { }
     AboutComponent,
     HomeComponent,
     ContactComponent,
-    TestimonialComponent
+    TestimonialComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
