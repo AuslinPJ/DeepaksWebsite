@@ -7,6 +7,8 @@ import {MatToolbarModule,MatIconModule,MatButtonModule
 import { AboutComponent } from './about/about.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
+import { TestimonialComponent } from './testimonial/testimonial.component';
 
 //Routing
 const appRoutes: Routes = [
@@ -24,7 +26,16 @@ const appRoutes: Routes = [
   redirectTo: '/home',
   pathMatch: 'full'
 },
-
+{
+  path: 'contact',
+  component: ContactComponent,
+ 
+},
+{
+  path: 'testimonial',
+  component: TestimonialComponent,
+ 
+},
 
 ];
 
@@ -45,7 +56,9 @@ export class MaterialModule { }
   declarations: [
     AppComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    ContactComponent,
+    TestimonialComponent
   ],
   imports: [
     BrowserModule,
