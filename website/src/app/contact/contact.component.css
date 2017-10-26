@@ -88,6 +88,14 @@
     text-decoration: none;
     border-radius: 50%;
 }
+.image
+{position: fixed; 
+    top: 08%; 
+    left: 0; 
+  
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;}
 
 /* Add a hover effect if you want */
 .fa:hover {
