@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { ServicesComponent } from './services/services.component';
+import { AgmCoreModule } from '@agm/core';
 
 //Routing
 const appRoutes: Routes = [
@@ -72,6 +73,9 @@ export class MaterialModule { }
     BrowserModule,
     MaterialModule,
     BrowserAnimationsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'YOUR_KEY'
+    }),
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only

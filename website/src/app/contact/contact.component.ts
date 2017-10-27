@@ -5,11 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+export class ContactComponent  {
+  title: string = 'Location';
+  lat: number = 51.678418;
+  lng: number = 7.809007;
+ 
 
 }
