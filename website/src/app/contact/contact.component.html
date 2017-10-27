@@ -1,16 +1,29 @@
 
-
-
-      <h1>{{ title }}</h1>
-      
-      <!-- this creates a google map on the page with the given lat/lng from -->
-      <!-- the component as the initial center of the map: -->
-      <agm-map [latitude]="lat" [longitude]="lng">
-        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-      </agm-map>
+<!DOCTYPE html>
+<html lang = "en-US">
+ <head>
+ <meta charset = "UTF-8">
+ 
+ <style type = "text/css">
+  body {
+  background-image: url("https://images4.alphacoders.com/548/54874.jpg");
+  position: fixed; 
+  top: 08%; 
+  left: 0; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+  }
+ </style>
+ </head>
+ <body>
+   
+   
       
       <head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"></head>
-      <br />
+      <br /><br/>
       <div class="inner contact">
                       <!-- Form Area -->
                       <div class="contact-form">
@@ -24,17 +37,26 @@
                                   <input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email" />
                                   <!-- Subject -->
                                   <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Subject" />
-                              </div><!-- End Left Inputs -->
-                              <!-- Right Inputs -->
-                              <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
                                   <!-- Message -->
                                   <textarea name="message" id="message" class="form textarea"  placeholder="Message"></textarea>
+                                   <!-- Send Button -->
+                                   <button type="submit" id="submit" name="submit" class="form-btn semibold">Send Message</button> 
+                              </div><!-- End Left Inputs -->
+                             
+                              <!-- Right Inputs -->
+                                  <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
+                            <!-- this creates a google map on the page with the given lat/lng from -->
+      <!-- the component as the initial center of the map: -->
+           <agm-map [latitude]="lat" [longitude]="lng">
+            <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+             </agm-map><br><br>
+             <i class="material-icons">location_on</i> xxxx, Nagercoil<br>
+             <i class="material-icons">call</i>9999999999
                               </div><!-- End Right Inputs -->
-                              <!-- Bottom Submit -->
+                              <!-- Bottom Submit 
                               <div class="relative fullwidth col-xs-12">
-                                  <!-- Send Button -->
-                                  <button type="submit" id="submit" name="submit" class="form-btn semibold">Send Message</button> 
-                              </div><!-- End Bottom Submit -->
+                                 
+                              </div> End Bottom Submit -->
                               <!-- Clear -->
                               <div class="clear"></div>
                           </form>
@@ -50,4 +72,6 @@
                       </div><!-- End Contact Form Area -->
                   </div><!-- End Inner -->
       
-      
+                
+                       </body>
+                      </html>      
