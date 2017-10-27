@@ -74,7 +74,7 @@ export class MaterialModule { }
     MaterialModule,
     BrowserAnimationsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'YOUR_KEY'
+      apiKey: 'AIzaSyAj5WVCzS-nhQJvJMJWBt-spgHIwRbPRW4'
     }),
     RouterModule.forRoot(
       appRoutes,

@@ -1,68 +1,53 @@
 
 
- <!DOCTYPE html>
- <html>
- <head>
- <style>
- .containerr {
-     position: relative;
- }
- 
- .topleft {
-     position: absolute;
-     top: 8px;
-     left: 16px;
-     font-size: 18px;
- }
- 
- img { 
-     width: 100%;
-     height: 100%;
-     opacity: 0.5;
- }
- </style>
- </head>
- <body>
- <div class="containerr">
-   <img src="https://images4.alphacoders.com/548/54874.jpg" alt="Norway" width="1000" height="300"class="image">
-   <div class="topleft">
-    <div class="form-style-6">
 
-
- <!-- Add icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<!-- Add font awesome icons -->
-<a href="#" class="fa fa-facebook"></a>
-<a href="#" class="fa fa-twitter"></a>
-
-<!-- this creates a google map on the page with the given lat/lng from -->
-<!-- the component as the initial center of the map: -->
-<h1>{{ title }}</h1>
-<agm-map [latitude]="lat" [longitude]="lng">
+      <h1>{{ title }}</h1>
+      
+      <!-- this creates a google map on the page with the given lat/lng from -->
+      <!-- the component as the initial center of the map: -->
+      <agm-map [latitude]="lat" [longitude]="lng">
         <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
       </agm-map>
-  
-      <h1>Contact Us</h1>
-      <form>
-      <input type="text" name="field1" placeholder="Your Name" />
-      <input type="email" name="field2" placeholder="Email Address" />
-      <textarea name="field3" placeholder="Type your Message"></textarea>
-      <input type="submit" value="Send" />
-      </form>
-      </div>
-      </div>
-
       
- </div>
-
- 
- </body>
- </html>
- 
-  
-    
- 
-
- 
-
+      <head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"></head>
+      <br />
+      <div class="inner contact">
+                      <!-- Form Area -->
+                      <div class="contact-form">
+                          <!-- Form -->
+                          <form id="contact-us" method="post" action="#">
+                              <!-- Left Inputs -->
+                              <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
+                                  <!-- Name -->
+                                  <input type="text" name="name" id="name" required="required" class="form" placeholder="Name" />
+                                  <!-- Email -->
+                                  <input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email" />
+                                  <!-- Subject -->
+                                  <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Subject" />
+                              </div><!-- End Left Inputs -->
+                              <!-- Right Inputs -->
+                              <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
+                                  <!-- Message -->
+                                  <textarea name="message" id="message" class="form textarea"  placeholder="Message"></textarea>
+                              </div><!-- End Right Inputs -->
+                              <!-- Bottom Submit -->
+                              <div class="relative fullwidth col-xs-12">
+                                  <!-- Send Button -->
+                                  <button type="submit" id="submit" name="submit" class="form-btn semibold">Send Message</button> 
+                              </div><!-- End Bottom Submit -->
+                              <!-- Clear -->
+                              <div class="clear"></div>
+                          </form>
+      
+                          <!-- Your Mail Message -->
+                          <div class="mail-message-area">
+                              <!-- Message -->
+                              <div class="alert gray-bg mail-message not-visible-message">
+                                  <strong>Thank You !</strong> Your email has been delivered.
+                              </div>
+                          </div>
+      
+                      </div><!-- End Contact Form Area -->
+                  </div><!-- End Inner -->
+      
+      
