@@ -134,3 +134,34 @@ input {
     position: relative;
     z-index: 9999;
 }
+/** Social icons **/
+
+body {
+  background: #ccc; }
+
+#social-icon-wrapper {
+  width: 200px;
+  height: auto;
+  margin: 10px auto; }
+
+.social-icon {
+  display: block;
+  width: 61px;
+  height: 60px;
+  float: left;
+  margin-top: 30px;
+  margin-right: 5px;
+  text-align: left;
+  background: transparent url(http://digital-hideaway.com/always/social-icons.png) 0 0 no-repeat;
+  background-size: 200px; }
+
+
+
+#facebook {
+  background-position: -69px 0px;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease; }
+
+#facebook:hover {
+  background-position: -69px -62px; }
+
