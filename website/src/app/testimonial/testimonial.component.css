@@ -35,3 +35,12 @@ a {
   color: rgb(64, 131, 169);
   text-decoration: none;
 }
+
+.image
+{position: fixed; 
+    top: 08%; 
+    left: 0; 
+  
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;}
