@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import {MatToolbarModule,MatIconModule,MatButtonModule
-,MatSidenavModule,MatFormFieldModule} from '@angular/material';
+,MatSidenavModule,MatFormFieldModule,MatInputModule} from '@angular/material';
 import { AboutComponent } from './about/about.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
@@ -11,6 +11,8 @@ import { ContactComponent } from './contact/contact.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { ServicesComponent } from './services/services.component';
 import { AgmCoreModule } from '@agm/core';
+import {FormControl,FormsModule,ReactiveFormsModule, Validators} from '@angular/forms';
+
 
 //Routing
 const appRoutes: Routes = [
@@ -73,6 +75,10 @@ export class MaterialModule { }
     BrowserModule,
     MaterialModule,
     BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    FormsModule,   
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAj5WVCzS-nhQJvJMJWBt-spgHIwRbPRW4'
     }),

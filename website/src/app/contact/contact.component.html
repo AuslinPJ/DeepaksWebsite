@@ -3,17 +3,18 @@
 <html lang = "en-US">
  <head>
  <meta charset = "UTF-8">
- 
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
  <style type = "text/css">
   body {
-  /**background-image: url("https://images5.alphacoders.com/380/380576.jpg");**/
+  /**background-image: url("https://images5.alphacoders.com/380/380576.jpg");
+  background-image: url("https://static.pexels.com/photos/433267/pexels-photo-433267.jpeg");**/
   position: fixed; 
   top: 08%; 
   left: 0; 
   background-repeat: no-repeat;
   background-size: cover;
   /* Preserve aspet ratio */
-  min-width: 100%;
+  min-width: 100%;          
   min-height: 100%;
   }
  </style>
@@ -22,67 +23,53 @@
    
    
       
-      <head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"></head>
+      
       <br /><br/>
-      <div class="inner contact">
-                      <!-- Form Area -->
-                      <div class="contact-form">
-                          <!-- Form -->
-                          <form id="contact-us" method="post" action="#">
-                              <!-- Left Inputs -->
-                              <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
-                                  <!-- Name -->
-                                  <input type="text" name="name" id="name" required="required" class="form" placeholder="Name" />
-                                  <!-- Email -->
-                                  <input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email" />
-                                  <!-- Subject -->
-                                  <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Subject" />
-                                  <!-- Message -->
-                                  <textarea name="message" id="message" class="form textarea"  placeholder="Message"></textarea>
-                                   <!-- Send Button -->
-                                   <button type="submit" id="submit" name="submit" class="form-btn semibold">Send Message</button> 
-                              </div><!-- End Left Inputs -->
-                             
-                              <!-- Right Inputs -->
-                                  <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
-                            <!-- this creates a google map on the page with the given lat/lng from -->
-      <!-- the component as the initial center of the map: -->
-           <agm-map [latitude]="lat" [longitude]="lng">
-            <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-             </agm-map><br><br>
-             <i class="material-icons">location_on</i> Dr.Sam, Nagercoil<br>
-             <i class="material-icons">call</i>9999999999
-                              </div><!-- End Right Inputs -->
-                              <!-- Bottom Submit 
-                              <div class="relative fullwidth col-xs-12">
-                                 
-                              </div> End Bottom Submit -->
-                              <!-- Clear -->
-                              <div class="clear"></div>
-                          </form>
-      
-                          <!-- Your Mail Message -->
-                          <div class="mail-message-area">
-                              <!-- Message -->
-                              <div class="alert gray-bg mail-message not-visible-message">
-                                  <strong>Thank You !</strong> Your email has been delivered.
-                              </div>
-                          </div>
-      
-                      </div><!-- End Contact Form Area -->
-                  </div><!-- End Inner -->
-      
+        
                 <!--social icons -->
 
-                
-              
-                <div id="social-icon-wrapper">
+                <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
+                <div class="boxed">
+                  
+                <form class="example-form">
+                    <mat-form-field class="example-full-width" >
+                      <input matInput floatPlaceholder="auto" placeholder="Name" >
+                    </mat-form-field>
+                    <br>
                     
-                    <a id="facebook" class="social-icon" href="#"></a>
-                   
-                  </div>
-               
+                    <mat-form-field>
+                      <input matInput placeholder="Enter your email" [formControl]="email" required>
+                      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field><br>
+                    <mat-form-field class="example-full-width" >
+                      <input matInput floatPlaceholder="auto" placeholder="Subject" >
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <textarea matInput placeholder="Message"></textarea>
+                    </mat-form-field><br>
+                    <button mat-raised-button color="primary" >Send Message</button>
+                    
+                  </form>   
                 
-               
+                 
+                </div>
+              </div>
+             <!-- Right Inputs -->
+             <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
+              <!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+<agm-map [latitude]="lat" [longitude]="lng">
+<agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map><br><br>
+<i class="material-icons">location_on</i> Dr.Sam, Nagercoil<br>
+<i class="material-icons">call</i>9999999999
+                </div><!-- End Right Inputs -->
+              <div id="social-icon-wrapper">
+                                  
+                                  <a id="facebook" class="social-icon" href="#"></a>
+                                 
+                                </div>
+                             
                        </body>
                       </html>      
