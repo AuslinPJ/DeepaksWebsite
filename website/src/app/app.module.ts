@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import {MatToolbarModule,MatIconModule,MatButtonModule
-,MatSidenavModule,MatFormFieldModule,MatInputModule} from '@angular/material';
+,MatSidenavModule,MatFormFieldModule,MatInputModule,MatMenuModule} from '@angular/material';
 import { AboutComponent } from './about/about.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
@@ -56,7 +56,8 @@ const appRoutes: Routes = [
     MatIconModule,
     MatButtonModule,
     MatSidenavModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatMenuModule
   ]
 })
 export class MaterialModule { }
@@ -78,7 +79,9 @@ export class MaterialModule { }
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
-    FormsModule,   
+    FormsModule,  
+  
+     
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAj5WVCzS-nhQJvJMJWBt-spgHIwRbPRW4'
     }),
