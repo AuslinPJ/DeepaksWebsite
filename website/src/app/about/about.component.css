@@ -12,7 +12,7 @@ html, body {
   }
   
   body {
-    background: #222;
+    background: #ccc;
     color: #bbb;
     font: 1rem/1 "open sans", sans-serif; /* 16px */
   }
@@ -20,7 +20,8 @@ html, body {
   #container {
     background: #333;
     margin: auto;
-    max-width: 48rem; /* 768px */
+    max-width: 768px;
+    height:620px;
     padding: 1.25rem; /* 20px */
   }
   
@@ -38,7 +39,7 @@ html, body {
   }
   
   #content-about > h1 {
-    font-size: 3.125rem; /* 50px */
+    font-size:  70px ;
     margin-bottom: 0.625rem; /* 10px */
     text-align: center;
   }
@@ -46,7 +47,7 @@ html, body {
   #content-about > h2 {
     border-bottom: 0.125rem dashed #444; /* 2px */
     color: #666;
-    font-size: 1.25rem; /* 20px */
+    font-size: 30px ;
     margin-bottom: 1.25rem; /* 20px */
     padding-bottom: 1.25rem; /* 20px */
     text-align: center;
@@ -67,6 +68,7 @@ html, body {
     color: #ddd;
     font-family: "roboto mono", monospace;
     font-style: normal;
+    font-size: 20px ;
   }
   
   #content-about > p > em::before {

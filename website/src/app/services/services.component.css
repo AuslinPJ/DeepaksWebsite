@@ -47,7 +47,7 @@ a:hover {
 .hex {
 	width:150px;
 	height:86px;
-	background-color: #ccc;
+	background-color:teal;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;			
 	-webkit-background-size: auto 173px;							
@@ -189,3 +189,14 @@ a:hover {
 	.hex.hex-3 {
 		background: #80b971;
 	}
+
+	body {
+		background: #ccc; }
+
+		.h2 {
+			font: 100px 'Cookie', Helvetica, sans-serif;
+			color: #fff;
+			text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
+			margin-left: 400px;
+			
+		  }
