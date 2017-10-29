@@ -1,48 +1,94 @@
-body { margin: 0; padding: 0; }
-/* == project == */
-body { 
-  background: none repeat scroll 0% 0% rgb(240, 240, 240);
-  color: rgb(102, 102, 102);
-  font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
-  font-size: 22px;
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+figure.snip1232 {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 220px;
+  max-width: 310px;
+  width: 100%;
+  color: #333;
+  text-align: left;
+  box-shadow: none !important;
 }
-.wrapper {
-  width: 600px;
-  margin: 24px auto;
+figure.snip1232 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
-
-blockquote {
-  background-color: rgb(255, 255, 255);
-  border-radius: 6px;
-  font-family: Georgia, serif;
-  font-size: 22px;
-  line-height: 1.4;
+figure.snip1232 img {
+  max-width: 100%;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin-right: 5px;
+  display: block;
+  z-index: 1;
+  position: absolute;
+  right: 50%;
+}
+figure.snip1232 blockquote {
   margin: 0;
-  padding: 17px;
-}
-p.author {
-  background-color: transparent;
+  display: block;
+  border-radius: 8px;
+  position: relative;
+  background-color: #fafafa;
+  padding: 65px 50px 35px 50px;
+  font-size: 0.8em;
   font-weight: 500;
-  font-size: 22px;
-  line-height:22px;
-  margin: 24px 0 0 18px;
+  margin: -40px 0 0;
+  line-height: 1.6em;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
-strong {
-  color: rgb(68, 68, 68);
+figure.snip1232 blockquote:before,
+figure.snip1232 blockquote:after {
+  font-family: 'FontAwesome';
+  content: "\201C";
+  position: absolute;
+  font-size: 50px;
+  opacity: 0.3;
+  font-style: normal;
 }
-
-a {
-  color: rgb(64, 131, 169);
-  text-decoration: none;
+figure.snip1232 blockquote:before {
+  top: 55px;
+  left: 20px;
 }
-
-.image
-{position: fixed; 
-    top: 08%; 
-    left: 0; 
-  
-    /* Preserve aspet ratio */
-    min-width: 100%;
-    min-height: 100%;}
-
-   
+figure.snip1232 blockquote:after {
+  content: "\201D";
+  right: 20px;
+  bottom: 5px;
+}
+figure.snip1232 .author {
+  margin: 0;
+  height: 80px;
+  display: block;
+  text-align: left;
+  padding: 0 35px;
+  position: relative;
+  z-index: 1;
+}
+figure.snip1232 .author h5,
+figure.snip1232 .author span {
+  left: 50%;
+  position: absolute;
+  opacity: 0.8;
+  padding: 3px 5px;
+}
+figure.snip1232 .author h5 {
+  text-transform: uppercase;
+  bottom: 50%;
+  margin: 0;
+  font-weight: 800;
+  color: #ffffff;
+}
+figure.snip1232 .author span {
+  font-size: 0.8em;
+  color: #000000;
+  top: 50%;
+  font-weight: 500;
+}
+/* Demo purposes only */
+body {
+  background-color: #212121;
+}
