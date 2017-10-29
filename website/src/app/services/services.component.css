@@ -1,202 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Open+Sans');
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 body {
-	font-family:arial;
-	font-size:12px;
-	background: #f6f7f0;
-	margin:0;
-	padding:0;	
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #999;
 }
-
-#info {
-	background:#333;
-	opacity:0.8;
-	position: absolute;
-	top:5px;
-	right:5px;
-	width:280px;
-	color:#fff;
-	border-radius: 5px;
-	z-index:10
-}
-
-	#info p {
-		padding:0 10px;
-	}
 
 a {
-	text-decoration:none;
-	color: #3e8ed7;
+  text-decoration: none;
+  margin: 1rem 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  letter-spacing: 1px;
 }
 
-a:hover {
-	color: #61b7e6;
-}	
-
-.container {
-	width:700px;
-	height:100%;
-	position:absolute;
-	top:200px;
-	left:50%;
-	margin-left:-350px;
+p {
+  font-size: 0.9rem;
+  margin: 1rem 0;
+  line-height: 1.5;
 }
 
-
-
-/* HEXAGON STARTS HERE */
-.hex {
-	width:150px;
-	height:86px;
-	background-color:teal;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;			
-	-webkit-background-size: auto 173px;							
-	-moz-background-size: auto 173px;							
-	-ms-background-size: auto 173px;							
-	-o-background-size: auto 173px;							
-	position: relative;
-	float:left;
-	margin:25px 5px;
-	text-align:center;
-	zoom:1;
+section {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
 }
-		
-	.hex.hex-gap {
-		margin-left: 86px;
-		background-color: #8b8989
-	}
-	
-	.hex a {
-		display:block;
-		width: 100%;
-		height:100%;
-		text-indent:-9999em;
-		position:absolute;
-		top:0;
-		left:0;
-	}
 
-	.hex .corner-1,
-	.hex .corner-2 {
-		position: absolute;
-		top:0;
-		left:0;
-		width:100%;
-		height:100%;
-		background: inherit;								
-		z-index:-2;						
-		overflow:hidden;
-		-webkit-backface-visibility: hidden;
-		-moz-backface-visibility: hidden;
-		-ms-backface-visibility: hidden;
-		-o-backface-visibility: hidden;			
-		backface-visibility: hidden;			
-	}
-	
-	.hex .corner-1 {
-		z-index:-1;
-		-webkit-transform: rotate(60deg);
-		-moz-transform: rotate(60deg);
-		-ms-transform: rotate(60deg);
-		-o-transform: rotate(60deg);
-		transform: rotate(60deg);
-	}
-	
-	.hex .corner-2 {
-		-webkit-transform: rotate(-60deg);
-		-moz-transform: rotate(-60deg);
-		-ms-transform: rotate(-60deg);
-		-o-transform: rotate(-60deg);
-		transform: rotate(-60deg);
-	}
-	
-	.hex .corner-1:before,
-	.hex .corner-2:before {
-		width: 173px;
-		height:	173px;
-	  content: '';
-	  position: absolute;
-	  background: inherit;
-	  top:0;
-	  left: 0;
-	  z-index: 1;
-	  background: inherit;
-	  background-repeat:no-repeat;
-		-webkit-backface-visibility: hidden;
-		-moz-backface-visibility: hidden;
-		-ms-backface-visibility: hidden;
-		-o-backface-visibility: hidden;	
-		backface-visibility: hidden;				  
-	}			
-	
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #333;
+  font-size: 1.825rem;
+  margin: 1.3rem 0;
+}
 
-	.hex .corner-1:before {
-		-webkit-transform: rotate(-60deg) translate(-87px, 0px);
-		-moz-transform: rotate(-60deg) translate(-87px, 0px);
-		-ms-transform: rotate(-60deg) translate(-87px, 0px);
-		-o-transform: rotate(-60deg) translate(-87px, 0px);
-		transform: rotate(-60deg) translate(-87px, 0px);	
-	  -webkit-transform-origin: 0 0;
-	  -moz-transform-origin: 0 0;
-	  -ms-transform-origin: 0 0;
-	  -o-transform-origin: 0 0;
-	  transform-origin: 0 0;
-	}			
-	
-	.hex .corner-2:before {
-		-webkit-transform: rotate(60deg) translate(-48px, -11px);
-		-moz-transform: rotate(60deg) translate(-48px, -11px);
-		-ms-transform: rotate(60deg) translate(-48px, -11px);
-		-o-transform: rotate(60deg) translate(-48px, -11px);
-		transform: rotate(60deg) translate(-48px, -11px);	
-		bottom:0;
-	}		
+.section-lead {
+  max-width: 600px;
+  margin: 1rem auto 1.5rem;
+}
 
+.service a {
+  color: #5b7abb;
+  display: block;
+}
 
-	
-	/* Custom styles*/
-	.hex .inner {		
-		color:#eee;
-	}
-	
-	.hex h4 {
-		font-family: 'Josefin Sans', sans-serif;		
-		margin:0;			
-	}
-	
-	.hex hr {
-		border:0;
-		border-top:1px solid #eee;
-		width:60%;
-		margin:15px auto;
-	}
-	
-	.hex p {
-		font-size:16px;
-		font-family: 'Kotta One', serif;
-		width:80%;
-		margin:0 auto;
-	}
+.service h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #56ceba;
+  font-size: 1.3rem;
+  margin: 1rem 0 0.6rem;
+}
 
-	.hex.hex-1 {
-		background:#3e8ed7;
-	}
-	
-	.hex.hex-2 {
-		background: #f5c53c;
-	}
-	
-	.hex.hex-3 {
-		background: #80b971;
-	}
+.services-grid {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
 
-	body {
-		background: #ccc; }
+.service {
+  background: #fff;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 4px;
+  text-align: center;
+  -webkit-box-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid #e7e7e7;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
 
-		.h2 {
-			font: 80px 'Cookie', Helvetica, sans-serif;
-			color: #fff;
-			text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
-			margin-left: 400px;
-			
-		  }
+.service:hover {
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+}
+
+.service i {
+  font-size: 3.45rem;
+  margin: 1rem 0;
+}
+
+.service1 i,
+.service1 h4,
+.service1 .cta {
+  color: #42b7ca;
+}
+
+.service1:hover {
+  border: 2px solid #42b7ca;
+}
+
+.service2 i,
+.service2 h4,
+.service2 .cta {
+  color: #425fca;
+}
+
+.service2:hover {
+  border: 2px solid #425fca;
+}
+
+.service3 i,
+.service3 h4,
+.service3 .cta {
+  color: #9c42ca;
+}
+
+.service3:hover {
+  border: 2px solid #9c42ca;
+}
+
+.service .cta span {
+  font-size: 0.6rem;
+}
+
+.service > * {
+  flex: 1 1 100%;
+}
+
+.service .cta {
+  align-self: flex-end;
+}
+
+@media all and (max-width:900px) {
+  .services-grid {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+  }
+}

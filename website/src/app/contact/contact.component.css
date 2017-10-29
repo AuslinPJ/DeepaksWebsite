@@ -58,3 +58,75 @@ body {
     margin-left: 500px;
     
   }
+  /** Office hours **/
+  
+  #mainnav {
+    height: 60px;
+    font-family: Verdana;
+  }
+  
+  .navbar-brand {
+    line-height: 60px;
+    padding-top: 0;
+  }
+  
+  .nav li a {
+    line-height: 60px;
+    padding-top: 0;
+    font-size: 16px;
+  }
+  
+  .container-contact {
+    width: 80vw;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+  }
+  
+  .btn-send {
+    background-color: #737373;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .btn-send:hover {
+    background-color: #b3b3b3;
+  }
+  
+  .map-overlay {
+     background: transparent; 
+     position: relative; 
+     width: 100%;
+     height: 500px; /* your iframe height */
+     top: 500px;  /* your iframe height */
+     margin-top: -500px;  /* your iframe height */
+  }
+  
+  #footer {
+    background-color: #1a1a1a;
+    color: #a6a6a6;
+    padding-top: 15px;
+  }
+  
+  .footer-nav a:hover {
+    text-decoration: none;
+    color: #f2f2f2;
+  }
+  
+  .footer-nav a {
+    color: #a6a6a6;
+  }
+  
+  .footer-nav li {
+    list-style-type: none;
+    margin: 5px;
+  }
+  
+  .footer-hours h3 {
+    margin-left: 50px;
+  }
+  
+  .footer-hours li {
+    list-style-type: none;
+    margin: 5px;
+  }
+    
