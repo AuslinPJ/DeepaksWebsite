@@ -25,6 +25,13 @@
     border: 1px solid rgba(0, 0, 0, 0.5);
   }
   
+  @media (max-width: 600px) {
+    .button-row{
+      display:none;
+      
+    }
+  }   
+    
 
   .mat-toolbar.mat-primary {
     width:100%;
