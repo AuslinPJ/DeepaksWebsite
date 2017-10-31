@@ -48,17 +48,14 @@ h3 {
   width: 240px;
 
 }
+
 /*Google Maps */
 agm-map {
-  height: 300px;
-  width:380px;
+  height: 280px;
+  width:440px;
    
 }
-.service3
-{
-  height: 300px;
-  width:380px;
-}
+
 
 
 
@@ -128,14 +125,7 @@ agm-map {
 }
 
 
-.service3 h4,
-.service3 .cta {
-  color: #9c42ca;
-}
 
-.service3:hover {
-  border: 2px solid #9c42ca;
-}
 
 .service .cta span {
   font-size: 0.6rem;
@@ -157,4 +147,22 @@ agm-map {
     -webkit-box-direction: normal;
     flex-direction: column;
   }
+}
+@media (max-width: 600px) {
+  /*Google Maps */
+agm-map {
+  height: 280px;
+  width:280px;
+   
+}
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  { 
+  .example-form {
+    
+    width: 350px;
+
+}
+
 }
