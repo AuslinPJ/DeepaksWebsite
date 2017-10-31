@@ -1,106 +1,49 @@
-
-<!DOCTYPE html>
-<html lang = "en-US">
- <head>
- <meta charset = "UTF-8">
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
- <style type = "text/css">
-  body {
-  /**background-image: url("https://images5.alphacoders.com/380/380576.jpg");
-  background-image: url("https://static.pexels.com/photos/433267/pexels-photo-433267.jpeg");**/
-  position: fixed; 
-  top: 08%; 
-  left: 0; 
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* Preserve aspet ratio */
-  min-width: 100%;          
-  min-height: 100%;
-  }
- </style>
- </head>
- <body>
+<section>
+    <h3>Office hours</h3>
+    <p class="section-lead">Monday - Friday: 0.00 am-0.00pm<br>Saturday : 0.00 am-0.00pm<br>Sunday: 0.00 am-0.00pm</p>
+    
+    <div class="services-grid">
+      <div class="service service1">
+       
+          <form class="example-form">
+              <mat-form-field class="example-full-width" >
+                <input matInput floatPlaceholder="auto" placeholder="Name" >
+              </mat-form-field>
+              
+              
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Enter your email" [formControl]="email" required>
+                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+              </mat-form-field><br>
+              <mat-form-field class="example-full-width" >
+                <input matInput floatPlaceholder="auto" placeholder="Subject" >
+              </mat-form-field><br>
+              
+              <mat-form-field class="example-full-width">
+                <textarea matInput placeholder="Message"></textarea>
+              </mat-form-field>
+            <button mat-raised-button color="primary" class="example-full-width" >Send Message</button>
+              </form> 
+             
+        
+      </div>
      
-     <!-- <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
-      <p class="h2">Contact us</p>-->
-                <!--social icons -->
-                <br>
-                <div class="container-fluid">
-                  <div class="row">
-                    
-                   
-                  
-                 
-                <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
-              <div class="boxed">
-                  
-                <form class="example-form">
-                    <mat-form-field class="example-full-width" >
-                      <input matInput floatPlaceholder="auto" placeholder="Name" >
-                    </mat-form-field>
-                    <br>
-                    
-                    <mat-form-field class="example-full-width">
-                      <input matInput placeholder="Enter your email" [formControl]="email" required>
-                      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-                    </mat-form-field><br>
-                    <mat-form-field class="example-full-width" >
-                      <input matInput floatPlaceholder="auto" placeholder="Subject" >
-                    </mat-form-field>
-                    <br>
-                    <mat-form-field class="example-full-width">
-                      <textarea matInput placeholder="Message"></textarea>
-                    </mat-form-field><br>
-                    <button mat-raised-button color="primary" >Send Message</button>
-                    
-                  </form>                  
-                </div>
-                
-                <h4>Office Hours</h4>
-                <ul>
-                  <li>Monday - Friday:  0:00 am - 0:00 pm</li>
-                  <li>Saturday: 0:00 am - 0:00 pm</li>
-                  <li>Sunday: 0:00 am - 0:00 pm</li>
-                </ul>
-                    
-                          
-              </div>
-             <!-- Right Inputs -->
-             <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
-              <!-- this creates a google map on the page with the given lat/lng from -->
-<!-- the component as the initial center of the map: -->
-<agm-map [latitude]="lat" [longitude]="lng">
-<agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-</agm-map><br><br>
-<div class="col-md-4 footer-contact">
-  
-          <div>
-              <i class="material-icons">location_on</i>
-                
-              1234 NW 12th St. Nageroil B.C. 12345
-         
-          </div>
-  
-          <div>
-            
-            <i class="material-icons">phone</i>              (123)456-7890
-            
-          </div>
-  
-          <div>
-              <i class="material-icons">email</i>
-          
-              hello@nephrology.com
-          
-          </div>
-  
+      
+      <div class="service service2">
+      
+          <agm-map [latitude]="lat" [longitude]="lng">
+              <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+              </agm-map>
+             
+      </div>
+      <div class="service service3">
+          <h4>Contact Us</h4>
+        <span>
+         <p> <i class="material-icons">location_on</i>
+          1234 NW 12th St. Nageroil B.C. 12345</p>
+         <p> <i class="material-icons">phone</i>(123)456-7890</p>
+         <p><i class="material-icons">email</i>hello@nephrology.com</p>
+            </span>  
         </div>
-                </div><!-- End Right Inputs -->
-              </div>
-            </div> 
-                
-                       </body>
-                       
-                     
-                     
-                      </html>      
+    </div>
+  </section>

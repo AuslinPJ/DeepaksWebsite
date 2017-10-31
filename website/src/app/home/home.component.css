@@ -4,6 +4,19 @@
   -webkit-transition: all .6s ease;
 }
 
+@media (max-width: 600px) {
+  .warmOscar::before {
+    content:'';
+    position: absolute;
+    top:30%;
+    left:5%;
+    right:5%;
+    width: 400px;
+    height:50%;
+    background-color: rgba(0,0,0,.5);
+  }
+
+}
 
 
  .image {
@@ -39,6 +52,7 @@
     margin:0 auto;
     -webkit-transform: scale(.5);
   }
+  @media (min-width: 600px) {
   .warmOscar::before {
     content:'';
     position: absolute;
@@ -49,6 +63,7 @@
     height:50%;
     background-color: rgba(0,0,0,.5);
   }
+}
   .warmOscar::after {
     content:'';
     position: absolute;
