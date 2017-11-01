@@ -12,6 +12,7 @@ import { TestimonialComponent } from './testimonial/testimonial.component';
 import { ServicesComponent } from './services/services.component';
 import { AgmCoreModule } from '@agm/core';
 import {FormControl,FormsModule,ReactiveFormsModule, Validators} from '@angular/forms';
+import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
 
 
 //Routing
@@ -84,7 +85,7 @@ export class MaterialModule { }
      
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAj5WVCzS-nhQJvJMJWBt-spgHIwRbPRW4'
-    }),
+    }),AgmSnazzyInfoWindowModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
