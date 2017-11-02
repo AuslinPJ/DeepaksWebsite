@@ -88,7 +88,7 @@ export class MaterialModule { }
     }),AgmSnazzyInfoWindowModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      { enableTracing: true , useHash:true} // <-- debugging purposes only
     )
   ],
   providers: [],
