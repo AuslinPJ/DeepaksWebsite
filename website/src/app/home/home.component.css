@@ -150,7 +150,10 @@ and (orientation : landscape) {  body {
     }
     
     .card-header img{
-      width: 25%;
+      width: 25px;
+     
+      position: fixed;
+     
     }
     
   }
