@@ -34,7 +34,9 @@
     
 
   .mat-toolbar.mat-primary {
-    width:100%;
+    left: 0px;
+    min-width: 100% !important;
+    max-width: 100%;
     background: #252525;
     color: rgba(255,255,255,.87);
 }
@@ -42,4 +44,31 @@
 .mat-fab.mat-primary, .mat-mini-fab.mat-primary, .mat-raised-button.mat-primary {
   background-color:#252525;
 }
-
+/*iphone6*/
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : landscape) {
+  .mat-toolbar.mat-primary {
+    left: 0px;
+   
+    min-width: 100% !important;
+    max-width: 100%;
+    background: #252525;
+    color: rgba(255,255,255,.87);
+} 
+.mat-raised-button {
+  
+   font-family: inherit;
+   padding: 0px 0;
+   font-size: 8px;
+   font-weight: 50;
+   text-transform: uppercase;
+   color: #e6e6e6;
+   position: relative;
+   display: inline-block;
+   outline: none;
+   margin: 10px 10px;
+   
+ }
+}
