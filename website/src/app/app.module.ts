@@ -13,6 +13,22 @@ import { ServicesComponent } from './services/services.component';
 import { AgmCoreModule } from '@agm/core';
 import {FormControl,FormsModule,ReactiveFormsModule, Validators} from '@angular/forms';
 import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
+//firebase
+import { AngularFireModule } from 'angularfire2';
+
+// New imports to update based on AngularFire2 version 4
+import { AngularFireDatabaseModule } from  'angularfire2/database-deprecated';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+export const firebaseConfig = {
+ 
+  apiKey: "AIzaSyDCh8xDNoP9M7gL7_zhhof2VjNeE5oc_lo",
+  authDomain: "deepakswebsite-e8676.firebaseapp.com",
+  databaseURL: "https://deepakswebsite-e8676.firebaseio.com",
+  projectId: "deepakswebsite-e8676",
+  storageBucket: "",
+  messagingSenderId: "880824067572"
+};
 
 
 //Routing
@@ -81,6 +97,9 @@ export class MaterialModule { }
     MatInputModule,
     ReactiveFormsModule,
     FormsModule,  
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
   
      
     AgmCoreModule.forRoot({
