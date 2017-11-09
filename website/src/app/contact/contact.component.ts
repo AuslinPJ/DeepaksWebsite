@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl,ReactiveFormsModule, Validators} from '@angular/forms';
+import {FormControl,FormBuilder,ReactiveFormsModule, Validators} from '@angular/forms';
 import { AngularFireDatabase, FirebaseListObservable } from "angularfire2/database-deprecated";
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Observable } from 'rxjs/Observable';
 import * as firebase from 'firebase/app';
 import { AngularFireModule } from 'angularfire2';
-
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -21,28 +21,33 @@ export class ContactComponent  {
   user: Observable<firebase.User>;
   items: FirebaseListObservable<any[]>;
   msgVal: string = '';
-
+  
   constructor(public afAuth: AngularFireAuth, public af: AngularFireDatabase) {
-    this.items = af.list('/messages', {
-      query: {
-        limitToLast: 50
-      }
- 
-    });
-    this.user = this.afAuth.authState;
+  
+   
   }
-
+  
   
   email = new FormControl('', [Validators.required, Validators.email]);
-  
+ 
     getErrorMessage() {
-      return this.email.hasError('required') ? 'You must enter a value' :
+      return this.email.hasError('required') ? 'You must ..S enter a value' :
           this.email.hasError('email') ? 'Not a valid email' :
               '';
     }
-
-    Send(desc: string) {
-      this.items.push({ message: desc});
-      this.msgVal = '';
+    onSubmit(formData:NgForm) {
+      const name = formData.value.name;
+      //const email1=formData.value.email1;
+      const message=formData.value.message;
+      const subject=formData.value.subject;
+      const date = Date();
+      let formRequest = { name,  message,subject, date};
+   console.log(formRequest);
+      this.af.list('/messages').push( formRequest);
+      //this.adForm.reset();
+      
   }
 }
+  
+
+
