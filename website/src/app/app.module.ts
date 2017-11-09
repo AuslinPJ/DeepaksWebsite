@@ -22,12 +22,12 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 
 export const firebaseConfig = {
  
-  apiKey: "AIzaSyDCh8xDNoP9M7gL7_zhhof2VjNeE5oc_lo",
-  authDomain: "deepakswebsite-e8676.firebaseapp.com",
-  databaseURL: "https://deepakswebsite-e8676.firebaseio.com",
-  projectId: "deepakswebsite-e8676",
+  apiKey: "AIzaSyDBdQWphzRA26WvxjIlONJP96v3MzDBBak",
+  authDomain: "deepakwebsite-a0cd0.firebaseapp.com",
+  databaseURL: "https://deepakwebsite-a0cd0.firebaseio.com",
+  projectId: "deepakwebsite-a0cd0",
   storageBucket: "",
-  messagingSenderId: "880824067572"
+  messagingSenderId: "523927135754"
 };
 
 
