@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
+import {MatDialogModule} from '@angular/material/dialog';
 import {MatToolbarModule,MatIconModule,MatButtonModule
 ,MatSidenavModule,MatFormFieldModule,MatInputModule,MatMenuModule} from '@angular/material';
 import { AboutComponent } from './about/about.component';
@@ -13,6 +14,9 @@ import { ServicesComponent } from './services/services.component';
 import { AgmCoreModule } from '@agm/core';
 import {FormControl,FormsModule,ReactiveFormsModule, Validators} from '@angular/forms';
 import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
+import { HttpModule } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 //firebase
 import { AngularFireModule } from 'angularfire2';
 
@@ -74,7 +78,9 @@ const appRoutes: Routes = [
     MatButtonModule,
     MatSidenavModule,
     MatFormFieldModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDialogModule,
+    MatSnackBarModule
   ]
 })
 export class MaterialModule { }
@@ -91,10 +97,13 @@ export class MaterialModule { }
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     MaterialModule,
+    MatDialogModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatSnackBarModule,
     ReactiveFormsModule,
     FormsModule,  
     AngularFireModule.initializeApp(firebaseConfig),
