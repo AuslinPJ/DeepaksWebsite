@@ -31,20 +31,20 @@ export class ContactComponent  {
   email = new FormControl('', [Validators.required, Validators.email]);
  
     getErrorMessage() {
-      return this.email.hasError('required') ? 'You must ..S enter a value' :
+      return this.email.hasError('required') ? 'You must enter a value' :
           this.email.hasError('email') ? 'Not a valid email' :
               '';
     }
     onSubmit(formData:NgForm) {
       const name = formData.value.name;
-      //const email1=formData.value.email1;
+      const email=formData.value.email;
       const message=formData.value.message;
-      const subject=formData.value.subject;
       const date = Date();
-      let formRequest = { name,  message,subject, date};
+      let formRequest = { name,email,message, date};
    console.log(formRequest);
       this.af.list('/messages').push( formRequest);
-      //this.adForm.reset();
+      formData.reset();
+      formData.resetForm();
       
   }
 }

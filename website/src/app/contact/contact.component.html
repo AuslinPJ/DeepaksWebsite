@@ -30,20 +30,20 @@
        
           <form class="example-form" #formData="ngForm" (ngSubmit)="onSubmit(formData)">
               <mat-form-field class="example-full-width" >
-                <input matInput floatPlaceholder="auto" placeholder="Name" (ngModel)="name" name="name">
+                <input matInput floatPlaceholder="auto" placeholder="Name" (ngModel)="name" name="name" required>
               </mat-form-field>
               
               
               <mat-form-field class="example-full-width">
-                <input matInput placeholder="Enter your email" [formControl]="email" name="email1" required (ngModel)="email">
-                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                <input matInput placeholder="Enter your email"  name="email" required (ngModel)="email">
+               <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>-->
               </mat-form-field><br>
               <mat-form-field class="example-full-width" >
                 <input matInput floatPlaceholder="auto" placeholder="Subject" (ngModel)="subject" name="subject">
               </mat-form-field><br>
               
               <mat-form-field class="example-full-width">
-                <textarea matInput placeholder="Message" name="message" (ngModel)="message" ></textarea>
+                <textarea matInput placeholder="Message" name="message" (ngModel)="message" required></textarea>
               </mat-form-field>
             <button mat-raised-button color="primary" [disabled]="!formData.valid" class="example-full-width" >Send Message</button>
               </form> 

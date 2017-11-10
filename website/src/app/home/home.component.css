@@ -17,7 +17,7 @@ height:470px;
 .card-header img{
   display: block;
   margin: auto;
-  width: 50%;
+  width: 75%;
 }
 
 .card-content {
@@ -45,7 +45,11 @@ height:470px;
   font-family: 'Open Sans', sans-serif;
   
 }
-
+h2 {
+  font: 30px 'Arizonia', Helvetica, sans-serif;
+  color: #2b2b2b;
+  text-shadow: 4px 4px 0px rgba(0,0,0,0.1); 
+}
 
 
 
@@ -257,11 +261,7 @@ and (orientation : landscape) {  body {
        
     }
   }
-  h2 {
-    font: 30px 'Arizonia', Helvetica, sans-serif;
-    color: #2b2b2b;
-    text-shadow: 4px 4px 0px rgba(0,0,0,0.1); 
-  }
+ 
 /* iphone5*/
   @media only screen 
   and (min-device-width : 320px) 
@@ -269,19 +269,19 @@ and (orientation : landscape) {  body {
   and (orientation : landscape) { 
   
     .card-header img{
-      width: 60px;
-      position: fixed;
+      width:60px;
+    
+      margin:auto;
        
     }
     .card-content {
   width: 50%;
   margin: 35px auto;
 }
-.card-content h3 {
-  font-size: 12px;
-  margin-bottom: 0;
-  color: #303F9F;
-  font-family: 'Montserrat', sans-serif;
+h2 {
+  font: 10px 'Arizonia', Helvetica, sans-serif;
+  color: #2b2b2b;
+  text-shadow: 4px 4px 0px rgba(0,0,0,0.1); 
 }
 
 .card-content h4 {
@@ -293,21 +293,22 @@ and (orientation : landscape) {  body {
 
 .card-content p {
   color: #727272;
-  font-size: 10px;
+  font-size: 6px;
   font-family: 'Open Sans', sans-serif;
   
 }
 .card {
   background-color: #f4f4f4;
-  width: 300px;
+  width: 200px;
   margin: 10px auto;
+  
   box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.7);
 }
 
 .card-header {
   overflow: hidden;
   width: 100%;
-  max-height: 50px;
+  max-height: 60px;
 }
 
   }
