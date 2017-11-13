@@ -1,39 +1,41 @@
-var functions = require('firebase-functions');
-const sendgrid = require('sendgrid')
-const client = sendgrid('AIzaSyAj5WVCzS-nhQJvJMJWBt-spgHIwRbPRW4')
-function parseBody(body) {
-  var helper = sendgrid.mail;
-  var fromEmail = new helper.Email(body.from);
-  var toEmail = new helper.Email(body.to);
-  var subject = body.subject;
-  var content = new helper.Content('text/html', body.content);
-  var mail = new helper.Mail(fromEmail, subject, toEmail, content);
-  return  mail.toJSON();
-}
-exports.httpEmail = functions.https.onRequest((req, res) => {
-  return Promise.resolve()
-    .then(() => {
-      if (req.method !== 'POST') {
-        const error = new Error('Only POST requests are accepted');
-        error.code = 405;
-        throw error;
-      }
-      const request = client.emptyRequest({
-        method: 'POST',
-        path: '/v3/mail/send',
-        body: parseBody(req.body)
-      });
-      return client.API(request)
-    })
-    .then((response) => {
-      if (response.body) {
-        res.send(response.body);
-      } else {
-        res.end();
-      }
-    })
-    .catch((err) => {
-      console.error(err);
-      return Promise.reject(err);
+
+
+const functions = require('firebase-functions');
+const nodemailer = require('nodemailer');
+
+const gmailEmail = functions.config().gmail.email;
+const gmailPassword = functions.config().gmail.password;
+
+const mailTransport = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: gmailEmail,
+        pass: gmailPassword
+    }
+});
+
+const APP_NAME = 'Queries from Web';
+const doc_email = 'drdeepaknagercoil@gmail.com'; //change
+
+exports.sendMsg = functions.database.ref('/messages/{pushId}')
+    .onWrite(event => {
+
+        const message = event.data.val();
+        return sendWelcomeEmail(message.name, message.message, message.email);
+
     });
-})
+
+function sendWelcomeEmail(name, msg, email) {
+    const mailOptions = {
+        from: `${APP_NAME} <noreply@firebase.com>`,
+        to: doc_email
+    };
+
+
+    mailOptions.subject = 'query from ' + email;
+    mailOptions.text = 'query from ' + email + 'is '+ msg;
+    return mailTransport.sendMail(mailOptions).then(() => {
+        console.log('msg sent:', msg);
+    });
+}
+

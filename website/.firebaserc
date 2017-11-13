@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "deepakwebsite-a0cd0"
+    "default": "deepakwebsite-a0cd0",
+    "staging": "deepaknagercoil"
   }
 }
