@@ -35,7 +35,7 @@ height:470px;
 .card-content h4 {
   font-size: 14px;
   margin-top: 0;
-  color: #FF5252;
+  color:cornflowerblue;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -55,7 +55,7 @@ h2 {
 
 body {
   /* The image used */
-  background-image: url("https://images6.alphacoders.com/429/429155.jpg");
+  background-image: url('/../assets/images/homebackground.jpg');
   position: fixed; 
    top: 08%; 
     left: 0; 
@@ -75,7 +75,7 @@ and (min-device-width : 375px)
 and (max-device-width : 667px) 
 and (orientation : landscape) { body {
   /* The image used */
-  background-image: url("https://images6.alphacoders.com/429/429155.jpg");
+  background-image: url('/../assets/images/homebackground.jpg');
   position: fixed; 
    top: 10%; 
     left: 0; 
@@ -109,7 +109,7 @@ text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
 .card-content h4 {
 font-size: 10px;
 margin-top: 0;
-color: #FF5252;
+color:cornflowerblue;
 font-family: 'Montserrat', sans-serif;
 }
 
@@ -139,7 +139,7 @@ and (min-device-width : 414px)
 and (max-device-width : 736px) 
 and (orientation : landscape) {  body {
   /* The image used */
-  background-image: url("https://images6.alphacoders.com/429/429155.jpg");
+  background-image: url('/../assets/images/homebackground.jpg');
   position: fixed; 
    top: 10%; 
     left: 0; 
@@ -177,7 +177,7 @@ and (orientation : landscape) {  body {
     .card-content h4 {
       font-size: 10px;
       margin-top: 0;
-      color: #FF5252;
+      color:cornflowerblue;
       font-family: 'Montserrat', sans-serif;
     }
     
@@ -225,7 +225,7 @@ and (orientation : landscape) {  body {
   .card-content h4 {
     font-size: 8px;
     margin-top: 0;
-    color: #FF5252;
+    color:cornflowerblue;
     font-family: 'Montserrat', sans-serif;
   }
   
@@ -276,7 +276,7 @@ and (orientation : landscape) {  body {
     .card-content h4 {
       font-size: 8px;
       margin-top: 0;
-      color: #FF5252;
+      color:cornflowerblue;
       font-family: 'Montserrat', sans-serif;
     }
     
@@ -331,7 +331,7 @@ h2 {
 .card-content h4 {
   font-size: 7px;
   margin-top: 0;
-  color: #FF5252;
+  color:cornflowerblue;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -356,7 +356,7 @@ h2 {
 }
 body {
   /* The image used */
-  background-image: url("https://images6.alphacoders.com/429/429155.jpg");
+  background-image: url('/../assets/images/homebackground.jpg');
   position: fixed; 
    top: 40px; 
     left: 0; 
