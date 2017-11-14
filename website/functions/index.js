@@ -33,7 +33,7 @@ function sendWelcomeEmail(name, msg, email) {
 
 
     mailOptions.subject = 'query from ' + email;
-    mailOptions.text = 'query from ' + email + 'is '+ msg;
+    mailOptions.text =  msg;
     return mailTransport.sendMail(mailOptions).then(() => {
         console.log('msg sent:', msg);
     });
