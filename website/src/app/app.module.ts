@@ -23,6 +23,8 @@ import { AngularFireModule } from 'angularfire2';
 // New imports to update based on AngularFire2 version 4
 import { AngularFireDatabaseModule } from  'angularfire2/database-deprecated';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import {NotificationsModule, NotificationsService} from 'angular4-notify';
+
 
 export const firebaseConfig = {
  
@@ -105,6 +107,7 @@ export class MaterialModule { }
     MatInputModule,
     MatSnackBarModule,
     ReactiveFormsModule,
+    NotificationsModule,
     FormsModule,  
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
@@ -119,7 +122,7 @@ export class MaterialModule { }
       { enableTracing: true , useHash:true} // <-- debugging purposes only
     )
   ],
-  providers: [],
+  providers: [ NotificationsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

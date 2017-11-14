@@ -12,6 +12,7 @@ import { Http, Headers, Response, URLSearchParams } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map'
 import {RequestOptions, Request, RequestMethod} from '@angular/http';
+import {NotificationsService} from 'angular4-notify';
 
 
 
@@ -33,10 +34,14 @@ export class ContactComponent  {
   msgVal: string = '';
   
   constructor(public afAuth: AngularFireAuth, public af: AngularFireDatabase,private http: Http,
-    public snackBar: MatSnackBar) 
+    public snackBar: MatSnackBar,protected notificationsService: NotificationsService) 
   {
   
    
+  }
+  mess()
+  {
+    this.notificationsService.addInfo('message sent');
   }
   /**snack bar 
  
@@ -59,8 +64,8 @@ export class ContactComponent  {
     let params: URLSearchParams = new URLSearchParams();
     let headers = new Headers({'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
     let options = new RequestOptions({headers: headers});
-    params.set('to', 'auslin.paji@gmail.com');
-    params.set('from', 'pajila@gmail.com');
+    params.set('to', 'drdeepaknagercoil@gmail.com');
+    params.set('from', 'hello@gmail.com');
     params.set('subject', 'test-email');
     params.set('content', 'Hello World');
     return this.http.post(url, params, options)
