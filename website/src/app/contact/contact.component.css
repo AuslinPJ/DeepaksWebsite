@@ -65,12 +65,10 @@ h3 {
 
 /*Google Maps */
 agm-map {
-  height: 310px;
+  height: 300px;
   width:440px;
    
 }
-
-
 
 
 .service a {
