@@ -1,60 +1,45 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
 <!-- Header Design -->
-
 <mat-toolbar color='primary'>
-        <button mat-icon-button [matMenuTriggerFor]="menu">
-                <mat-icon>menu</mat-icon>
-              </button>
-              <mat-menu #menu="matMenu">
-                <button mat-menu-item routerLink="/home" routerLinkActive="active">
-                  <span>Home</span>
-                </button>
-                <button mat-menu-item routerLink="/about" routerLinkActive="active">
-                
-                  <span>About</span>
-                </button>
-                <button mat-menu-item routerLink="/services" routerLinkActive="active">
-                  
-                  <span>Services</span>
-                </button>
-                <button mat-menu-item routerLink="/testimonial" routerLinkActive="active">
-                      
-                        <span>Testimonials</span>
-                      </button>
-                <button mat-menu-item routerLink="/contact" routerLinkActive="active" >
-                            
-                            <span>Contact</span>
-                </button>
-              </mat-menu>
-        <div class="button-row" style="width:100%;">
-       <button mat-raised-button  routerLink="/home" routerLinkActive="active"  style="width:20%" color="primary">Home</button>
-       <button mat-raised-button  routerLink="/about" routerLinkActive="active" style="width:20%"color="primary">About</button>
-        <button mat-raised-button  routerLink="/services" routerLinkActive="active"style="width:20%"color="primary">Services</button>
-        <button mat-raised-button  routerLink="/testimonial" routerLinkActive="active"style="width:20%"color="primary">Testimonials</button>
-        <button mat-raised-button  routerLink="/contact" routerLinkActive="active" style="width:20%"color="primary">Contact</button>
-        </div>
-    </mat-toolbar>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
 
-    
-  
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/home" routerLinkActive="active">
+      <span>Home</span>
+    </button>
+    <button mat-menu-item routerLink="/about" routerLinkActive="active">
+      <span>About</span>
+    </button>
+    <button mat-menu-item routerLink="/services" routerLinkActive="active">
+      <span>Services</span>
+    </button>
+    <button mat-menu-item routerLink="/testimonial" routerLinkActive="active">
+      <span>Testimonials</span>
+    </button>
+    <button mat-menu-item routerLink="/contact" routerLinkActive="active" >
+      <span>Contact</span>
+    </button>
+  </mat-menu>
 
-  
-   
+  <div class="button-row" style="width:100%;">
+    <button mat-raised-button  routerLink="/home" routerLinkActive="active"  style="width:20%" color="primary">Home</button>
+    <button mat-raised-button  routerLink="/about" routerLinkActive="active" style="width:20%"color="primary">About</button>
+    <button mat-raised-button  routerLink="/services" routerLinkActive="active"style="width:20%"color="primary">Services</button>
+    <button mat-raised-button  routerLink="/testimonial" routerLinkActive="active"style="width:20%"color="primary">Testimonials</button>
+    <button mat-raised-button  routerLink="/contact" routerLinkActive="active" style="width:20%"color="primary">Contact</button>
+  </div>
+</mat-toolbar>
 
- 
-  <router-outlet></router-outlet>
+<router-outlet></router-outlet>
+
+
  <!-- Footer Design -->
 <footer style="position: fixed; bottom: 0px;left: 0px; width: 100%; height: 60px">
-    <mat-toolbar color="primary" class="bottom">
-        <i class="material-icons">copyright</i>
-        <span style="font-size: 10px" align ="center">copyrights</span>
-       
-       
-        
-        
-         
-    </mat-toolbar>
-    </footer>
+  <mat-toolbar color="primary" class="bottom">
+  <i class="material-icons">copyright</i>
+  <span style="font-size: 10px" align ="center">copyrights</span>
+  </mat-toolbar>
+</footer>
     

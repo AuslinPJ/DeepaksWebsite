@@ -43,19 +43,7 @@ export class ContactComponent  {
   {
     this.notificationsService.addInfo('message sent');
   }
-  /**snack bar 
- 
 
- 
-  openSnackBar() {
-    this.snackBar.openFromComponent(PizzaPartyComponent, {
-      duration: 500,
-    });
-  }
-      
-   
-
-  end of snack bar */
   
   /**firebase */
 
@@ -101,11 +89,3 @@ export class ContactComponent  {
   }
 }
   
-/**snackbar 
-@Component({
-  selector: 'snack-bar-component-example-snack',
-  templateUrl: 'snack-bar-component-example-snack.html',
-  styles: [`.example-pizza-party { color: hotpink; }`],
-})
-export class PizzaPartyComponent {}
-**/

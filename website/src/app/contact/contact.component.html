@@ -1,27 +1,29 @@
-<head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
- 
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 </head>
 
 <section>  
-        
-    <div class="services-grid">
-        <div class="service service1">
-         
-            <h4 class="section-lead">Clinic hours  </h4>
-            <span class="section-lead">Monday - Friday: 9.00 am-5.00 pm<br>Saturday : 9.00 am-2.00 pm<br>Sunday : 3.00 pm-5.00 pm</span>
+  <div class="services-grid">
+    <div class="service service1">
+        <h4 class="section-lead">Clinic hours  </h4>
+        <span class="section-lead">Monday - Friday: 9.00 am-5.00 pm<br>
+        Saturday : 9.00 am-2.00 pm<br>
+        Sunday : 3.00 pm-5.00 pm
+        </span>     
+    </div>            
               
-        </div>
-       
-        
-        <div class="service service2">
-        
-            <h4 class="section-lead"> &emsp; &emsp;Contact Details  </h4>
-          
-                <i style="width:2%" class="material-icons">email</i> 
-                <span style="font-size: 10px" align ="center">drdeepak1983@gmail.com</span>
-                <i style="width:2%" class="material-icons">phone</i>
+    <div class="service service2">
+        <h4 class="section-lead"> &emsp; &emsp;Contact Details  </h4>
+        <i style="width:2%" class="material-icons">email</i> 
+        <span style="font-size: 10px" align ="center">drdeepak1983@gmail.com</span>
+        <i style="width:2%" class="material-icons">phone</i>
+        <span style="font-size: 10px" align ="center">
+        <a href="+91 9994029113">+91 9994029113</a></span> 
+    </div>
+  </div>
 
 
+<<<<<<< HEAD
                 <span style="font-size: 10px" align ="center">
                   <a href="+91 9994029113">+91 9994029113</a></span>
                <!-- <span style="font-size: 10px" align ="center">+91 9994029113</span><br>-->
@@ -40,41 +42,53 @@
                 <input matInput floatPlaceholder="auto" placeholder="Name" (ngModel)="name" name="name" required>
               </mat-form-field>
               
+=======
+
+  <div class="services-grid">
+    <div class="service service1">
+      <!-- Angular Form-->
+      <form class="example-form" #formData="ngForm" (ngSubmit)="onSubmit(formData)">
+
+          <mat-form-field class="example-full-width" >
+            <input matInput floatPlaceholder="auto" placeholder="Name" (ngModel)="name" name="name" required>
+          </mat-form-field>
+>>>>>>> 727bcae81680e7b6a9aa78594e496e8628c8f75a
               
-              <mat-form-field class="example-full-width">
-                <input matInput placeholder="Enter your email"  name="email" required (ngModel)="email" pattern="[a-zA-Z0-9.!#$% &’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*">
-               <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>-->
-              </mat-form-field><br>
-              <mat-form-field class="example-full-width" >
-                <input matInput floatPlaceholder="auto" placeholder="Subject" (ngModel)="subject" name="subject">
-              </mat-form-field><br>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Enter your email"  name="email" required (ngModel)="email" pattern="[a-zA-Z0-9.!#$% &’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*">
+          </mat-form-field><br>
+
+          <mat-form-field class="example-full-width" >
+            <input matInput floatPlaceholder="auto" placeholder="Subject" (ngModel)="subject" name="subject">
+          </mat-form-field><br>
               
-              <mat-form-field class="example-full-width">
-                <textarea matInput placeholder="Message" name="message" (ngModel)="message" required></textarea>
-              </mat-form-field>
-            <button mat-raised-button color="primary" [disabled]="!formData.valid" class="example-full-width" (click)="mess()" >Send Message</button>
-              </form> 
-             
-        
-      </div>
-      
-      
-      <div class="service service2">
-      
-          <agm-map [latitude]="lat" [longitude]="lng">
-              <agm-marker [latitude]="lat" [longitude]="lng">
-                <agm-snazzy-info-window [isOpen]="true" [latitude]="51.673858" [longitude]="7.815982" >
-                 <ng-template>
-                    <p class="solid">KP Road, <br> Nagercoil, <br>Kanyakumari, Tamil Nadu </p>
-                  </ng-template>
-                </agm-snazzy-info-window>
-              </agm-marker>
-              </agm-map>
-             
-      </div>
-      
+          <mat-form-field class="example-full-width">
+            <textarea matInput placeholder="Message" name="message" (ngModel)="message" required></textarea>
+          </mat-form-field>
+
+          <button mat-raised-button color="primary" [disabled]="!formData.valid" class="example-full-width" (click)="mess()" >Send Message</button>
+      </form> 
+      <!-- Angular notify
+        <div class="notify1">
+            <angular4-notify-notifications-container ></angular4-notify-notifications-container>
+        </div> -->
     </div>
-   
-  </section>
+ 
+
+    <!-- AngularGoogle  Maps --> 
+    <div class="service service2">
+      <agm-map [latitude]="lat" [longitude]="lng">
+        <agm-marker [latitude]="lat" [longitude]="lng">
+          <agm-snazzy-info-window [isOpen]="true" [latitude]="51.673858" [longitude]="7.815982" >
+                 <ng-template>
+                  <p class="solid">KP Road, <br> Nagercoil, <br>Kanyakumari, Tamil Nadu </p>
+                  </ng-template>
+          </agm-snazzy-info-window>
+        </agm-marker>
+      </agm-map>
+    </div>
+      
+  </div>
+</section>
 
  

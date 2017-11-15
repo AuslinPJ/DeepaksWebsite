@@ -1,17 +1,8 @@
 
-<!-- Firebase setup 
-<div class="row columns">
-  <button (click)="login()" *ngIf="!(user | async)?.uid">Anonymous Login</button>
-  <button (click)="logout()" *ngIf="(user | async)?.uid">Logout</button>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+</head>
 
-  <input type="text" id="message" *ngIf="(user | async)?.uid" placeholder="Type your comments" (keyup.enter)="Send($event.target.value)" [(ngModel)]="msgVal" />
-  <div id="details-container">
-      <p *ngFor="let item of items | async"><img src="../assets/images/pin.svg">{{item.message}}</p>
-  </div>
-</div>
-End of Firebase setup-->
-
-<head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"></head>
 <figure class="snip1232">
   <div class="author">
     <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample7.jpg" alt="sq-sample7"/>
@@ -19,6 +10,7 @@ End of Firebase setup-->
   </div>
   <blockquote>I adore Dr.Deepak such a great physician. </blockquote>
 </figure>
+
 <figure class="snip1232 hover">
   <div class="author">
     <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample10.jpg" alt="sq-sample10"/>
@@ -26,6 +18,7 @@ End of Firebase setup-->
   </div>
   <blockquote>Thank you Dr.Deepak. You saved my life.</blockquote>
 </figure>
+
 <figure class="snip1232">
   <div class="author">
     <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample12.jpg" alt="sq-sample12"/>
